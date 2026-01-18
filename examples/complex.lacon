@@ -36,7 +36,7 @@ default {
 		edge top=x-height bottom=baseline
 	}
 
-	font size=10pt footnote-size=9pt family=PlayFair Display fallback=[Noto Serif, Noto Sans]
+	font size=10pt size-footnote=9pt family=PlayFair Display fallback=[Noto Serif, Noto Sans]
 }
 
 print {

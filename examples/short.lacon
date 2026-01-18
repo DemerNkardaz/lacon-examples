@@ -2,21 +2,21 @@ $my-book Just my book sample layout test
 $pi π
 
 mode default
-meta > format size="70×108" fraction="1/16"
+meta > format [size, fraction]=["70×108", "1/16"]
 
 default
-  page paper=custom size="170 × 260 in mm" margin=21mm
+  page [paper, size, margin]=[custom, "170 × 260 in mm", 21mm]
   paragraph
     justification enabled=true spacing={min=85% max=130%} tracking={min=-0.05em max=0.025em} glyph-scale={min=97% max=102%}
     indent first-line={amount=5mm all=false} hanging=0pt
     overhang true
-    hyphenation enabled=auto min-length=7 min-after=3 min-before=4 consecutive-limit=3
+    hyphenation enabled=auto consecutive-limit=3 [min-*length, after, before]=[7, 3, 4]
     [spacing, leading] 1em
     [widows, orphans] 2
-  text kerning=true ligatures=true number-type=linear number-width=tabular edge={top=x-height bottom=baseline}
-  font size=10pt footnote-size=9pt family=PlayFair Display fallback=[Noto Serif, Noto Sans]
+  text [kerning,ligatures]=true [number-*type, width]=[linear, tabular] edge={top=x-height bottom=baseline}
+  font [size*, -footnote]=[10pt, 9pt] family=PlayFair Display fallback=[Noto Serif, Noto Sans]
 
-print > page > margin inside=16mm outside=26mm
+print > page > margin [inside, outside]=[16mm, 26mm]
 
 just-note $my-book
 i-love $pi~zza

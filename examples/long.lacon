@@ -73,7 +73,7 @@ default {
 
 	font {
 		size 10pt
-		footnote-size 9pt
+		size-footnote 9pt
 		family PlayFair Display
 		fallback [
 			Noto Serif, 

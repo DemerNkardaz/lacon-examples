@@ -114,3 +114,10 @@ parent-3 > parent-2 > parent-1 > child new-key=value second-key=value
 
 // Assigning a single value to multiple keys using a key array
 [_key-1, _key-2, _key-3] value
+// When using an array as the value, the keys will be assigned the corresponding items from the array
+[_key-4, _key-5] [value-4, value-5]
+// Set “*” for specify keys prefix
+[_key-*10, 11, 12] value
+
+// Shorthand syntax example
+another-dictionary > sub-dictionary integer=1 float=1.5 [param-*min, max, norm]=[10, 100, 50]
