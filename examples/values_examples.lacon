@@ -30,12 +30,13 @@ int 1
 float 1.5
 boolean [true, false]
 
-// Formal types (units)
+// Formal types (units) (highlighting)
 hex 0x10FFFF
 degree 90deg
 radian 45rad
 fraction 1fr
 percent 100%
+size 1024MB
 length [1mm, 1cm, 1in, 1pt, 1em]
 miscellaneous [auto, none]
 
