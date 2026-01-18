@@ -12,7 +12,6 @@ $old-english-mingling ġebland
 old-english-snowstorm $old-english-snow~$old-english-mingling
 
 
-
 // Simple string: quotes are optional but may be required in certain cases
 string-1 Text
 string-2 "Text"
@@ -22,6 +21,8 @@ escaped-string "\"Quotes\"\n\t\b\r\f\\"
 unicode-characters-1 Kalium-40 (\u{2074}\u{2070}K)
 unicode-characters-2 [\u{10338}] Gothic Thiuth
 
+// Use \$ to insert a literal “$” and prevent it from being parsed as a variable.
+escape-variable \$old-english-snow
 
 
 // Other simple value types:
