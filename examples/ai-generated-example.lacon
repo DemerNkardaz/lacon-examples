@@ -83,5 +83,5 @@ root-node
 
 // 10. Финальный тест переменных с тильдой
 deployment
-  server-path $base-path~/deploy/~$project-name~.sh
+  server-path $base-path~/deploy/$project-name~.sh
   check-variable $author_name~@internal
