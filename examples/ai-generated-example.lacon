@@ -1,0 +1,87 @@
+// ==========================================
+// LACON STRESS TEST FILE
+// ==========================================
+
+// 1. Регистрация переменных
+$project-name "Lacon Parser Test"
+$version 2.0.1
+$author_name Gemini
+$base-path /usr/local
+$ext-info (contains "special" symbols: =, >, [, ])
+
+// 2. Глобальные настройки (Смешанный стиль)
+project-meta {
+  name $project-name
+  version $version
+  author $author_name
+  details $ext-info
+}
+
+// 3. Тест неявных блоков и оператора пути
+system-config
+  paths
+    root $base-path
+    bin > local > apps $base-path/bin
+    logs > absolute true
+  
+  performance
+    threads 4
+    caching enabled=true strategy="LRU"
+    [min-mem, max-mem] [128MB, 1024MB]
+
+// 4. Тест многострочных данных
+documentation @(
+  This is a raw multiline string.
+    It preserves indents relative to the first line.
+  Symbols like { } [ ] = are ignored here.
+)
+
+changelog (
+  "Fixed variable interpolation with ~",
+  "Added support for @() syntax",
+  "Improved path resolver"
+)
+
+// 5. Тест накопления (Appending)
+changelog + "Stability improvements"
+system-config > paths > bin + /opt/bin
+
+// 6. Тест компактного (short) синтаксиса и мульти-ключей
+ui-theme [primary, secondary]=#FFFFFF font-size=12pt borders={width=1px style=solid}
+ui-theme > states [hover, active, focus]=#F0F0F0
+
+// Тест префиксов с помощью звездочки
+ui-theme > buttons [btn-*large, medium, small]=[24px, 16px, 12px]
+
+// 7. Сложные типы и юникод
+advanced-types {
+  hex-val 0xFFEEDD
+  unicode-test "Greek: \u{03A9}, Emoji: \u{1F600}"
+  escaped "Line 1\nLine 2\tTabbed \"Quotes\""
+  literal-dollar \$variable_is_not_replaced
+}
+
+// 8. Пустые структуры и переопределение
+temp-data {
+  old-logs []
+  cache {}
+}
+
+// Переопределение существующего объекта в пустой и наполнение заново
+temp-data > cache {}
+temp-data > cache session-id="abc-123" timestamp=1642544400
+
+// 9. Тест вложенности через пробелы (Indent-only)
+root-node
+  level-1
+    level-2
+      level-3-key value
+      another-key "value with space"
+  
+  level-1-sibling
+    status auto
+
+// 10. Финальный тест переменных с тильдой
+deployment
+  server-path $base-path~/deploy/~$project-name~.sh
+  check-variable $author_name~@internal
