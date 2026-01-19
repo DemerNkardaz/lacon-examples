@@ -23,7 +23,7 @@ system-config
     root $base-path
     bin > local > apps $base-path/bin
     logs > absolute true
-  
+	
   performance
     threads 4
     caching enabled=true strategy="LRU"
@@ -44,7 +44,7 @@ changelog (
 
 // 5. Тест накопления (Appending)
 changelog + "Stability improvements"
-system-config > paths > bin + /opt/bin
+system-config > paths > bin > opt /opt/bin
 
 // 6. Тест компактного (short) синтаксиса и мульти-ключей
 ui-theme [primary, secondary]=#FFFFFF font-size=12pt borders={width=1px style=solid}
