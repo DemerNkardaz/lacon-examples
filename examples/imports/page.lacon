@@ -1,0 +1,7 @@
+$paper-type A4
+
+@export {
+  paper $paper-type
+  margin 2.1cm
+  orientation portrait
+}

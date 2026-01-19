@@ -1,0 +1,9 @@
+$font-name Noto Sans
+$font-size 12pt
+$font-style Regular
+
+@export {
+  family $font-name
+  size $font-size
+  style $font-style
+}

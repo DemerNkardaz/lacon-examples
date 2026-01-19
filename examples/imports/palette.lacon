@@ -1,0 +1,9 @@
+$blue #007acc
+$gray #4d4d4d
+
+@export [
+  $blue
+  $gray
+  #ffffff
+  #000000
+]

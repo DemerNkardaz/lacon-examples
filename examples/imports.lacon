@@ -1,0 +1,16 @@
+$page_cfg imports/page.lacon
+$font_cfg imports/font.lacon
+$theme_cfg imports/theme.lacon
+$colors_list imports/palette.lacon
+
+document {
+  appearance @import=$theme_cfg
+  typography @import=$font_cfg
+  layout @import=$page_cfg
+	colors [
+		@import...=$colors_list,
+		#c819c8
+	]
+  
+  debug_mode true
+}
