@@ -1,0 +1,15 @@
+dynamic {
+	<emit: 0x0 to +1500 as local $code-point=@f"{:04X}"(@current)>unicode-$code-point {
+		code-point U+$code-point
+		character \u{$code-point}
+	}
+	<emit: 0x4E3 to +10 as local $code-point=@f"{:04X}"(@current)>unicode-$code-point~-character {
+		code-point U+$code-point
+		character \u{$code-point}
+	}
+
+	<emit: 1 to +22 as local $itr>$itr~key {
+		current-iteration $itr
+		current-iteration-as-hex "@f"{:04X}"($itr)"
+	}
+}

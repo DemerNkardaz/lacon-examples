@@ -1,0 +1,37 @@
+// zhongguo_n_sym_[fu,lu,shou,xi,shuangxi,cai] { 
+// 	codepoint "{1F260...i-1}"
+// 	recipe [
+// 		[zh f]
+// 		[zh l]
+// 		[zh sh]
+// 		[zh x]
+// 		[zh sx]
+// 		[zh c]
+// 	]
+// 	options
+// 		altLayoutKey [!> 1, !> 2, !> 3, !> 4, !> 5, !> 6]
+// 		altTitleUseLineBreak
+// 		useHiddenTags
+// 		hiddenTagsLanguage en-US
+// 	symbol
+// 		beforeLetter auspicious_motif
+// 		afterTitle /self/meaning
+// 		font BabelStone Han
+// }
+// taoist_n_sym_yinyang[,_emoji] {
+// 	unicode [262F, 262F]
+// 	sequence [[262F, FE0E], [262F, FE0F]]
+// 	recipe [[t yy], [emj yy]]
+// 	options {
+// 		useLetterLocale yinyang$
+// 		altLayoutKey [`, none]
+// 		noCalc [false, true]
+// 		useHiddenTags true
+// 		hiddenTagsLanguage en-US
+// 		ignoreCaseOnPanelFilter true
+// 	},
+// 	symbol {
+// 		beforeLetter "[,emoji]"
+// 		font "[BabelStone Han,]"
+// 	}
+// }
