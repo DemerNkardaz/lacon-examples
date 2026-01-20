@@ -8,7 +8,7 @@ document {
   typography @import=$font_cfg
   layout @import=$page_cfg
 	colors [
-		@import...=$colors_list,
+		@import... $colors_list,
 		#c819c8
 	]
   
