@@ -1,0 +1,27 @@
+dynamic {
+	<emit: 0x4E3 to -10 as local $code-point=@f({:04X}, @current)>
+	unicode-$code-point~-character {
+		code-point U+$code-point
+		character \u{$code-point}
+	}
+	<emit: 0x4E4 to +10 as local $code-point=@f({:04X}, @current)>
+	unicode-$code-point~-character {
+		code-point U+$code-point
+		character \u{$code-point}
+	}
+	<emit: 0 to +7 as local $i>
+	domino_n_tile_00_0$i~_horizontal {
+		[unicode, recipe] [U+@f({:04X}, $i), [dm h$i]]
+		symbol [character, designation]=[\u{@f({:04X(0x1F031)}, $i )}, 00-0$i]
+	}
+	<emit: -1 to -22 as local $itr>$itr~key {
+		[current-iteration*, -as-hex] [$itr, "@f({:04X}, $itr)"]
+	}
+	<emit: 0x0 to +1500 as local $code-point=@f({:04X}, @current)>
+	unicode-$code-point {
+		code-point U+$code-point
+		character \u{$code-point}
+	}
+}
+
+// TODO: Починить неправильное форматирование отрицательных чисел hex $itr
